@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Marcy Blog</h1>
+      </header>
+      <main>
+        <section>
+          <form id="post-form">
+            <h2>Say Something!</h2>
+            <div>
+              <label for="title-input" hidden>Post Title</label>
+              <input type="text" name="title" id="title-input" placeholder="Post Title">
+            </div>
+            <div>
+              <label for="content-input" hidden>Post Content</label>
+              <textarea name="content" id="content-input" placeholder="Post Content"></textarea>
+            </div>
+            <button>Post</button>
+          </form>
+        </section>
+        <section>
+          <h2>Feed</h2>
+          <ul id="posts-list">
+            <!-- Dynamic Posts Go Here -->
+          </ul>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
