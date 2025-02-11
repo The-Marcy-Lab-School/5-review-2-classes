@@ -97,7 +97,7 @@ When you think it all works, try running the app!
 
 
 ### **0:55 - 1:00 | Wrap-up & Takeaways**  
-- **Summarize key points:**  
+- **Key Points:**  
   ✅ **Classes** create reusable object blueprints.  
   ✅ **Private properties (`#property`)** prevent direct access from outside the class.  
   ✅ **Static properties/methods** belong to the class, not instances.  
