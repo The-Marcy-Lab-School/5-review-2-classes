@@ -1,9 +1,5 @@
 # 5-review-2-classes
 
-Here's a **1-hour classroom activity** to review **JavaScript classes, private properties, and static properties** in an engaging and structured way.
-
----
-
 ### **0:00 - 0:05 | Pop Quiz!**  
 
 - What is the difference between an instance property and a static property?  
@@ -53,34 +49,34 @@ Here's a **1-hour classroom activity** to review **JavaScript classes, private p
 - **Task:** Implement a `Product` class that has:  
   - **Private property:** `#price` (accessible only inside the class).  
   - **Instance property:** `name` (publicly accessible).  
-  - **Static property:** `totalProducts` (tracks the number of product instances).  
-  - **Methods:** `getPrice()` to retrieve `#price` and `Product.getTotalProducts()` to return `totalProducts`.  
+  - **Static property:** `totalInventoryPrice` (tracks the sum of all product prices).  
+  - **Methods:** `getPrice()` to retrieve `#price` and `Product.getTotalInventoryPrice()` to return `totalInventoryPrice`.  
 
 **<details><summary>Example Solution</summary>**
 
   ```js
   class Product {
     #price;
-    static totalProducts = 0;
+    static totalInventoryPrice = 0;
 
     constructor(name, price) {
       this.name = name;
       this.#price = price;
-      Product.totalProducts++;
+      Product.totalInventoryPrice++;
     }
 
     getPrice() {
       return this.#price;
     }
 
-    static getTotalProducts() {
-      return Product.totalProducts;
+    static getTotalInventoryPrice() {
+      return Product.totalInventoryPrice;
     }
   }
 
   const item1 = new Product("Laptop", 1200);
   console.log(item1.getPrice()); // 1200
-  console.log(Product.getTotalProducts()); // 1
+  console.log(Product.getTotalInventoryPrice()); // 1
   ```
 </details>
 
