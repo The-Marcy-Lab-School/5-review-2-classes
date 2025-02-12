@@ -22,7 +22,7 @@ const handlePostUpdate = (e) => {
 
   const postContent = e.target;
   const postCard = postContent.closest('.post-card');
-  const postId = postCard.dataset.postId;
+  const postId = Number(postCard.dataset.postId);
 
   // use the postId to find the Post instance
   const post = Post.getPostById(postId);
